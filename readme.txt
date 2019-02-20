@@ -9,4 +9,4 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Manor Theme is for bloggers who create engaging content. The neatly spaced out layout structure will keep your content at the forefront of user’s attention. Manor theme is responsive and Gutenberg ready.
+Manor Theme is for bloggers who create engaging content. With neatly spaced out layout structure, your content will be the main focus for your audience. Manor theme is responsive and Gutenberg ready.
