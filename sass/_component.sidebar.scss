@@ -1,0 +1,107 @@
+%widget-list {
+	list-style: none;
+	padding-left: 0;
+
+	ul {
+		margin-bottom:  -1rem;
+		padding-left: 2rem;
+	}
+
+	li {
+		padding: .5rem 0;
+	}
+}
+
+.widget-area {
+	padding: (1rem * $line-height) 0 0;
+	font-size: font-size(small);
+	border-top: 1px solid theme-color(border);
+
+	@include breakpoint(tablet) {
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 0;
+		}
+	}
+}
+
+.widget {
+	margin-bottom: 2rem * $line-height;
+
+	@include breakpoint(tablet) {
+		width: percentage(1/3);
+		padding: 0 $grid-gutter;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: theme-color(primary);
+		}
+	}
+}
+
+.widget-title {
+	margin-bottom: .5rem;
+	font-size: font-size(h5);
+}
+
+// Search Widget
+.widget_search .search-field {
+	width: 100%;
+	margin-bottom: .5rem;
+}
+
+// Archives Widget
+.widget_archive ul {
+	@extend %widget-list;
+}
+
+// Categories Widget
+.widget_categories ul {
+	@extend %widget-list;
+}
+
+// Calendar Widget
+.widget_calendar table {
+	width: 100%;
+}
+
+// Meta Widget
+.widget_meta ul {
+	@extend %widget-list;
+}
+
+// Nav Menu Widget
+.widget_nav_menu ul {
+	@extend %widget-list;
+}
+
+// Pages Widget
+.widget_pages ul {
+	@extend %widget-list;
+}
+
+// Recent Comments Widget
+.widget_recent_comments ul {
+	@extend %widget-list;
+}
+
+// Recent Posts Widget
+.widget_recent_entries ul {
+	@extend %widget-list;
+}
+
+.widget_recent_entries a {
+	font-weight: bold;
+}
+
+.widget_recent_entries .post-date {
+	display: block;
+	font-style: italic;
+	font-weight: normal;
+	color: theme-color(gray);
+}

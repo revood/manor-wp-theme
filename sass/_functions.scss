@@ -1,0 +1,13 @@
+// Get font size
+//
+// @param {String} $name
+@function font-size( $name ) {
+	@return map-get( $type-scale, $name );
+}
+
+// Get theme color
+//
+// @param {String} $name
+@function theme-color( $name ) {
+	@return map-get( $colors, $name );
+}

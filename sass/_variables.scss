@@ -1,0 +1,42 @@
+// Layout
+
+$container-max-width: 1170px;
+$content-width: 800px;
+$content-wide-width: 1200px;
+
+$grid-breakpoints: (
+	mobile: 600px,
+	tablet: 768px,
+	notebook: 1024px,
+);
+
+$grid-gutter: 1rem;
+
+// Typography
+
+$font-family: 'Open Sans', sans-serif;
+$line-height: 1.7;
+$type-scale: (
+	small: 0.875rem,
+	default: 1rem,
+	h1: 3rem,
+	h2: 2.5rem,
+	h3: 2rem,
+	h4: 1.5rem,
+	h5: 1.125rem,
+);
+
+// Colors
+
+$colors: (
+	default: #363636,
+	primary: #DF6296,
+	gray: #949494,
+	gray-light: #fafafa,
+	gray-dark: #1f1f1f,
+	border: #e6e6e6,
+);
+
+// Animations
+
+$anim-curve: cubic-bezier(0.4, 0.0, 0.2, 1);

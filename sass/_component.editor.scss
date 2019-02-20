@@ -1,0 +1,32 @@
+.editor-post-title {
+	&__input {
+		font-family: $font-family;
+		font-size: font-size(h1);
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.wp-block {
+	max-width: $content-width + 28px;
+
+	&[data-align="wide"] {
+		max-width: $content-wide-width + 28px;
+	}
+
+	&[data-align="full"] {
+		max-width: none;
+	}
+
+	&[data-align="right"],
+	&[data-align="left"] {
+		.editor-block-list__block-edit {
+			max-width: ( $content-width + 28px ) / 2;
+		}
+	}
+}
+
+// Gallery block
+.wp-block-gallery {
+	padding-left: 0;
+}

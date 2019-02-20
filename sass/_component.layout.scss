@@ -1,0 +1,21 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.container {
+	max-width: $container-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $grid-gutter;
+	padding-right: $grid-gutter;
+}
+
+.site-content {
+	overflow: hidden;
+}

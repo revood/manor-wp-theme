@@ -1,0 +1,75 @@
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: $font-family;
+	font-size: font-size(default);
+	line-height: $line-height;
+	background-color: #fff;
+	color: theme-color(default);
+}
+
+// Single direction margins
+h1, h2, h3,
+h4, h5, h6,
+hgroup,
+p, table,
+blockquote, address,
+pre, code,
+ul, ol,
+dl, dd {
+	margin: 0 0 1rem*$line-height;
+}
+
+h1, h2, h3 {
+	line-height: 1.2;
+}
+
+h1 { font-size: font-size(h1); }
+h2 { font-size: font-size(h2); }
+h3 { font-size: font-size(h3); }
+h4 { font-size: font-size(h4); }
+h5 { font-size: font-size(h5); }
+h6 { font-size: font-size(h6); }
+
+blockquote {
+	color: theme-color(primary);
+	font-weight: bold;
+	font-style: italic;
+
+	cite {
+		color: theme-color(default);
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: theme-color(primary);
+	text-decoration: none;
+	transition-property: color, background-color, border-color;
+	transition-duration: 0.15s;
+	transition-timing-function: $anim-curve;
+
+	&:hover {
+		color: darken( theme-color(primary), 15% );
+	}
+}
+
+dl, dd,
+ul, ol {
+	padding: 0;
+}
+
+ul, ol {
+	margin-left: 0;
+	padding-left: 2 * $grid-gutter;
+
+	li & {
+		margin-bottom: 0;
+	}
+}

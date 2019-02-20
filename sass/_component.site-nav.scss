@@ -1,0 +1,204 @@
+.site-nav {
+	padding-bottom: 1rem * $line-height;
+	border-bottom: 1px solid theme-color(border);
+	font-size: font-size(small);
+
+	@include breakpoint(tablet) {
+		padding-bottom: 0;
+	}
+}
+
+.site-nav-menu-container {
+	display: none;
+
+	@include breakpoint(tablet) {
+		display: block;
+	}
+
+	.nav-toggled-on & {
+		display: block;
+	}
+}
+
+// Toggle Button
+.site-nav-toggle {
+	display: flex;
+	margin: auto;
+	align-items: center;
+	padding: 0 16px 0 0;
+	background: transparent;
+	color: theme-color(default);
+	overflow: hidden;
+	border: 0;
+	font-size: font-size(small);
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+
+	&:focus {
+		background-color: transparent;
+	}
+
+	&-lines {
+		position: relative;
+		width: 48px;
+		height: 48px;
+		transition: transform 0.4s $anim-curve;
+
+		.nav-toggled-on & {
+			transform: rotate(90deg);
+		}
+	}
+
+	&-line {
+		position: absolute;
+		left: 16px;;
+		display: block;
+		width: 17px;
+		height: 1px;
+		background-color: theme-color(default);
+		transition: transform 0.25s 0.2s $anim-curve;
+	}
+
+	&-line.top {
+		top: 23px;
+		transform: translateY(-3px);
+
+		.nav-toggled-on & {
+			transform: rotate(-45deg) translateY(0);
+		}
+	}
+	&-line.bottom {
+		bottom: 23px;
+		transform: translateY(3px);
+
+		.nav-toggled-on & {
+			transform: rotate(45deg) translateY(0);
+		}
+	}
+}
+
+// Menu Items
+
+.site-nav {
+	.menu,
+	.sub-menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.menu {
+		@include breakpoint(tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	.sub-menu {
+		display: none;
+		margin-left: 2 * $grid-gutter;
+
+		@include breakpoint(tablet) {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 320px;
+			margin: 0;
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.1 );
+
+			.sub-menu {
+				top: 0;
+				left: 100%;
+			}
+		}
+	}
+
+	.menu-item {
+		position: relative;
+		border-bottom: 1px solid theme-color(border);
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		@include breakpoint(tablet) {
+			border-bottom: 0;
+		}
+	}
+
+	.menu-item:hover > .sub-menu,
+	.sub-menu.toggled-on {
+		display: block;
+	}
+
+	a {
+		display: block;
+		padding: (0.5rem * $line-height) 0;
+		font-weight: bold;
+		color: theme-color(default);
+
+		&:hover {
+			color: theme-color(gray-dark);
+		}
+
+		@include breakpoint(tablet) {
+			padding: (0.5rem * $line-height) (1.5 * $grid-gutter);
+		}
+	}
+
+	.current-menu-item > a {
+		color: theme-color(primary);
+	}
+
+	.menu-item-has-children > a {
+		padding-right: 24px; // Make space for dropdown toggle.
+
+		@include breakpoint(tablet) {
+			padding-right: calc( 1.5rem + 32px );
+		}
+	}
+
+	.dropdown-toggle {
+		position: absolute;
+		top: .875rem;
+		right: 0;
+		display: block;
+		width: 24px;
+		height: 24px;
+		margin: 0;
+		padding: 0;
+		background: transparent;
+		border: 0;
+
+		@include breakpoint(tablet) {
+			right: 8px;
+		}
+
+		&:before {
+			content: '';
+			position: relative;
+			left: 8px;
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-top: 1px solid theme-color(gray);
+			border-right: 1px solid theme-color(gray);
+			transform: rotate(135deg);
+		}
+
+		// Disable click action for toggle buttons on devices that support hovers.
+		@media (hover: hover) {
+			pointer-events: none;
+		}
+	}
+
+	.sub-menu .dropdown-toggle:before {
+		@include breakpoint(tablet) {
+			transform: rotate(45deg);
+		}
+	}
+}

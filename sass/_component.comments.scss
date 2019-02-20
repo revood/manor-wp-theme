@@ -1,0 +1,101 @@
+$comment-avatar-size: 4rem;
+
+.comments {
+	margin: (1rem * $line-height) auto 0;
+	padding: (1rem * $line-height) $grid-gutter 0;
+	border-top: 3px solid theme-color(border);
+	max-width: $content-width;
+
+	@include breakpoint(tablet) {
+		width: 85%;
+	}
+}
+
+.comment-list {
+	&,
+	.children {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	& {
+		margin-bottom: 1rem * $line-height;
+	}
+
+	.children {
+		margin-left: calc( 2rem + #{$comment-avatar-size} );
+	}
+}
+
+.comment-body {
+	position: relative;
+	padding: 1rem 0;
+	border-bottom: 1px solid theme-color(border);
+
+	.comment & {
+		padding-left: $comment-avatar-size + 1rem;
+	}
+}
+
+.comment-author .avatar {
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	border-radius: 50%;
+}
+
+.bypostauthor {
+	background-color: transparent;
+}
+
+.comment-meta a {
+	color: theme-color(default);
+}
+
+.comment-metadata {
+	font-size: font-size(small);
+}
+
+.comment-meta .says {
+	@extend .screen-reader-text;
+}
+
+li.comment .reply {
+	text-align: right;
+}
+
+.comment-reply-link {
+	font-size: .75rem;
+	font-weight: bold;
+	color: theme-color(default);
+}
+
+// Reply Form
+.comment-respond {
+	padding: (1rem * $line-height) 0;
+}
+
+.comment-form {
+	max-width: 600px;
+}
+
+.comment-form:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.comment-form label {
+	display: block;
+	margin-bottom: .5rem;
+}
+
+.comment-form input:not([type="submit"]),
+.comment-form textarea {
+	width: 100%;
+}
+
+.comment-form .required {
+	color: #f00;
+}

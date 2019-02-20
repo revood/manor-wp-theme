@@ -1,0 +1,38 @@
+/*!
+Theme Name: Manor
+Theme URI: https://www.revood.com/
+Author: Revood
+Author URI: https://www.revood.com/about/
+Version: 0.1.0
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Description: Manor Theme is for bloggers who create engaging content. The neatly spaced out layout structure will keep your content at the forefront of user’s attention. Manor theme is responsive and Gutenberg ready.
+Tags: blog, custom-logo, one-column, footer-widgets, featured-images, editor-style, custom-colors, custom-menu
+Text Domain: manor
+*/
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+@import url('../node_modules/normalize.css/normalize.css');
+
+@import "component.layout";
+@import "component.type";
+@import "component.elements";
+@import "component.alignment";
+@import "component.form-fields";
+@import "component.buttons";
+@import "component.accessibility";
+
+@import "component.site-header";
+@import "component.site-nav";
+@import "component.social-nav";
+@import "component.sidebar";
+@import "component.site-footer";
+
+@import "component.pagination";
+@import "component.comments";
+@import "component.content";
+@import "component.blocks";
+@import "component.gallery";

@@ -1,0 +1,42 @@
+.site-footer {
+	padding: 1rem 0;
+	font-size: 0.75rem;
+	text-align: center;
+	background-color: theme-color(gray-light);
+	color: theme-color(gray);
+
+	@include breakpoint(tablet) {
+		text-align: left;
+
+		.container {
+			display: flex;
+		}
+
+		.colophon {
+			margin-left: auto;
+		}
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: theme-color(primary);
+		}
+	}
+
+	.menu {
+		padding: 0;
+		margin: 0 -10px .5rem;
+		list-style: none;
+
+		@include breakpoint(tablet) {
+			margin-bottom: 0;
+		}
+	}
+
+	.menu-item {
+		display: inline-block;
+		padding: 0 10px;
+	}
+}

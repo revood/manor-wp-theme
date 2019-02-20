@@ -1,0 +1,128 @@
+// Colors
+$block-colors: (
+	white: #fff,
+	black: theme-color(default),
+	primary: theme-color(primary),
+);
+
+@each $name, $color in $block-colors {
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
+
+// Paragraphs
+p.has-drop-cap:not(:focus):first-letter {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+// Button block
+
+.wp-block-button {
+	& &__link:not(.has-background) {
+		background-color: theme-color(primary);
+	}
+
+	& &__link:not(.has-text-color) {
+		color: #fff;
+	}
+
+	&.is-style-outline &__link {
+		background-color: transparent !important;
+		border-color: theme-color(primary);
+	}
+
+	&.is-style-outline &__link:not(.has-text-color) {
+		color: theme-color(primary);
+	}
+}
+
+// Archives, Categories & Archives.
+
+.wp-block-archives,
+.wp-block-categories,
+.wp-block-latest-posts {
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding-bottom: .5rem;
+	}
+}
+
+.wp-block-categories {
+	ul {
+		list-style: disc;
+		padding-top: .5rem;
+	}
+}
+
+.wp-block-latest-posts {
+	&.is-grid li {
+		padding-top: 0.5rem * $line-height;
+		margin-bottom: 1rem * $line-height;
+		border-top: 2px solid theme-color(border);
+	}
+}
+
+// Quotes
+
+.wp-block-quote {
+	max-width: 460px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&:not(.is-large):not(.is-style-large) {
+		border-left: 0;
+		padding-left: 0;
+	}
+}
+
+.wp-block-pullquote {
+	border: 0;
+	// border-width: 2px;
+	// border-color: theme-color(border);
+	padding: (1rem * $line-height) 0;
+
+	blockquote {
+		margin-bottom: 0;
+	}
+
+	blockquote:not(.has-text-color) {
+		color: theme-color(default);
+	}
+}
+
+// Tables
+.wp-block-table {
+	th,
+	td {
+		border-color: theme-color(border);
+	}
+}
+
+// File download
+.wp-block-file {
+	& &__button {
+		background-color: theme-color(primary);
+		color: #fff;
+	}
+}
+
+// Separator
+.wp-block-separator {
+	margin: (1.5rem * $line-height) auto;
+	border: 0;
+	height: 2px;
+	background-color: theme-color(border);
+}
+
+// Gallery
+.wp-block-gallery {
+	margin-bottom: calc( #{$line-height}rem - 16px );
+}

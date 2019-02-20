@@ -1,0 +1,45 @@
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: calc( #{1rem * $line-height} - #{$grid-gutter} );
+
+	.gallery-item {
+		flex-grow: 1;
+		margin-right: $grid-gutter;
+		margin-bottom: $grid-gutter;
+		width: calc( ( 100% - #{$grid-gutter} ) / 2 );
+
+		&:nth-of-type(even) {
+			margin-right: 0;
+		}
+	}
+
+	.wp-caption-text {
+		font-size: .75rem;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+	margin-right: 0;
+}
+
+@include breakpoint(mobile) {
+	.gallery {
+		@for $i from 3 through 9 {
+			&.gallery-columns-#{$i} .gallery-item {
+				width: calc( ( 100% - #{$grid-gutter} * #{$i - 1} ) / #{$i} );
+				margin-right: $grid-gutter;
+			}
+
+			&.gallery-columns-#{$i} .gallery-item:nth-of-type(#{$i}n) {
+				margin-right: 0;
+			}
+		}
+	}
+}

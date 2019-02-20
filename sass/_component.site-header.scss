@@ -1,0 +1,20 @@
+.site-header {
+	padding: 1rem 0;
+	text-align: center;
+}
+
+.site-title {
+	font-size: 1.875rem;
+	font-weight: normal;
+	margin-bottom: 0;
+
+	a {
+		color: inherit;
+	}
+}
+
+.site-description {
+	font-size: 1rem;
+	font-style: italic;
+	color: theme-color(gray);
+}

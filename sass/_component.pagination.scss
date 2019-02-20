@@ -1,0 +1,32 @@
+.comments-pagination,
+.pagination {
+	margin-bottom: 1rem * $line-height;
+
+	.nav-links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.page-numbers {
+		margin: 0 0.5rem;
+		border-bottom: 1px solid transparent;
+	}
+
+	a {
+		color: theme-color(default);
+
+		&:hover {
+			color: theme-color(primary);
+		}
+	}
+
+	.page-numbers.current {
+		color: theme-color(primary);
+		border-color: theme-color(primary);
+	}
+
+	.dots {
+		opacity: 0.5;
+	}
+}
