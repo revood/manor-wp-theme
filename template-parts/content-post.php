@@ -28,13 +28,13 @@
 				<?php echo get_avatar( get_the_author_meta( 'ID' ), 164 ); ?>
 				<div>
 					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="url fn n"><?php the_author(); ?></a>
-					<?php echo wpautop( get_the_author_meta( 'description' ) ); ?>
+					<?php echo wpautop( esc_html( get_the_author_meta( 'description' ) ) ); ?>
 				</div>
 			</div><!-- /.vcard -->
 		</div><!-- /.entry-author -->
 
 		<div class="entry-share-links">
-			<span class="heading"><?php _e( 'Share', 'manor' ); ?></span>
+			<span class="heading"><?php esc_html_e( 'Share', 'manor' ); ?></span>
 			<?php manor_share_post_links(); ?>
 		</div><!-- /.entry-share-links -->
 	</div>

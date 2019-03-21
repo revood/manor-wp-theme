@@ -20,7 +20,7 @@
 		<div class="container">
 			<?php the_custom_logo(); ?>
 
-			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php if ( get_bloginfo( 'description' ) ) : ?>
 				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
 			<?php endif; ?>
@@ -52,7 +52,7 @@
 					<span class="site-nav-toggle-line top"></span>
 					<span class="site-nav-toggle-line bottom"></span>
 				</span>
-				<span class="site-nav-toggle-text"><?php _e( 'Menu', 'manor' ); ?></span>
+				<span class="site-nav-toggle-text"><?php esc_html_e( 'Menu', 'manor' ); ?></span>
 			</button>
 
 			<?php

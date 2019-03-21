@@ -2,7 +2,7 @@
 Contributors: greuben
 Tags: blog, custom-logo, one-column, footer-widgets, featured-images, editor-style, custom-colors, custom-menu
 Requires at least: 5.0
-Tested up to: 5.0.3
+Tested up to: 5.1.1
 Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

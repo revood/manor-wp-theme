@@ -13,11 +13,11 @@ get_header();
 
 		<article class="not-found post-0">
 			<header class="entry-header">
-				<h1 class="entry-title"><?php _e( 'Oops! That page could&rsquo;t be found.', 'manor' ); ?></h1>
+				<h1 class="entry-title"><?php esc_html_e( 'Oops! That page could&rsquo;t be found.', 'manor' ); ?></h1>
 			</header>
 
 			<div class="entry-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'manor' ); ?></p>
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'manor' ); ?></p>
 				<?php get_search_form(); ?>
 			</div>
 		</article>

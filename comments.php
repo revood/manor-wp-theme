@@ -21,12 +21,14 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<?php
-			$comments_number = get_comments_number();
-			printf(
-				/* translators: 1: number of comments, 2: post title */
-				_nx( '%1$s Reply to &ldquo;%2$s&ldquo;', '%1$s Replies to &ldquo;%2$s&ldquo;', $comments_number, 'comments title', 'manor' ),
-				number_format_i18n( $comments_number ),
-				get_the_title()
+			$manor_comments_number = get_comments_number();
+			echo esc_html(
+				sprintf(
+					/* translators: 1: number of comments, 2: post title */
+					_nx( '%1$s Reply to &ldquo;%2$s&ldquo;', '%1$s Replies to &ldquo;%2$s&ldquo;', $manor_comments_number, 'comments title', 'manor' ),
+					number_format_i18n( $manor_comments_number ),
+					get_the_title()
+				)
 			);
 			?>
 		</h3>
@@ -56,7 +58,7 @@ if ( post_password_required() ) {
 	<?php endif; // have_comments() ?>
 
 	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="comments-close"><?php _e( 'Comments are closed.', 'manor' ); ?></p>
+		<p class="comments-close"><?php esc_html_e( 'Comments are closed.', 'manor' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

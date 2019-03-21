@@ -140,11 +140,11 @@ function manor_content_width() {
 	/**
 	 * Filters the content width of the theme.
 	 *
-	 * @param int $content_width
+	 * @param int $manor_content_width
 	 */
-	$content_width = apply_filters( 'manor_content_width', 800 );
+	$manor_content_width = apply_filters( 'manor_content_width', 800 );
 
-	$GLOBALS['content_width'] = $content_width;
+	$GLOBALS['content_width'] = $manor_content_width;
 }
 add_action( 'after_setup_theme', 'manor_content_width', 0 );
 

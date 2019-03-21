@@ -29,7 +29,7 @@
 			<div id="colophon" class="colophon">
 				<?php
 				/* translators: site name */
-				printf( __( '&copy; %s', 'manor' ), get_bloginfo( 'name' ) );
+				echo esc_html( sprintf( __( '&copy; %s', 'manor' ), esc_html( get_bloginfo( 'name' ) ) ) );
 				?>
 				<span id="credits" class="credits">
 					<?php printf( '| Manor Theme by %s', '<a href="https://www.revood.com/" target="_blank" rel="noopener">Revood</a>' ); ?>
