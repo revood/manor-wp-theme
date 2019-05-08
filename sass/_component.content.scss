@@ -293,7 +293,7 @@
 	}
 }
 
-.entry-share {
+.entry-author {
 	max-width: $content-width;
 	margin: (1rem * $line-height) auto;
 	padding: 2rem;
@@ -310,10 +310,6 @@
 		justify-content: center;
 		align-items: flex-start;
 		font-size: font-size(h5);
-
-		@include breakpoint(tablet) {
-			align-items: flex-start;
-		}
 	}
 
 	.avatar {
@@ -325,44 +321,6 @@
 	.fn {
 		font-weight: bold;
 		color: inherit;
-	}
-}
-
-.entry-share-links {
-	flex-shrink: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 1rem;
-
-	.heading {
-		width: 100%;
-		margin-bottom: .5rem;
-		font-weight: bold;
-		font-size: .75rem;
-		text-align: center;
-	}
-
-	.share {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 48px;
-		height: 48px;
-		color: theme-color(default);
-		background-color: #fff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
-		border-radius: 0.375rem;
-		margin: 0 5px;
-
-		&:hover {
-			background-color: theme-color(primary);
-			color: #fff;
-		}
-	}
-
-	svg {
-		fill: currentColor;
 	}
 }
 

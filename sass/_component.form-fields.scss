@@ -15,8 +15,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	padding: 0.7rem;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
-	border: 0;
+	border: 1px solid #e6e6e6;
 	border-radius: 0.375rem;
 	transition: box-shadow .15s ease-in-out;
 }

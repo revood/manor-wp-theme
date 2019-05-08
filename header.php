@@ -38,13 +38,13 @@
 				'link_before'    => '<span class="screen-reader-text">',
 				'link_after'     => '</span>' . manor_get_link_icon(),
 				'depth'          => 1,
+				'fallback_cb'    => '',
 			)
 		);
 		?>
 	</nav>
 	<?php endif; ?>
 
-	<?php if ( has_nav_menu( 'primary' ) || is_customize_preview() ) : ?>
 	<nav id="site-nav" class="site-nav">
 		<div class="container">
 			<button id="site-nav-toggle" class="site-nav-toggle" aria-controls="site-nav-menu" aria-expanded="false">
@@ -61,13 +61,12 @@
 					'theme_location'  => 'primary',
 					'container_id'    => 'site-nav-menu',
 					'container_class' => 'site-nav-menu-container',
-					'fallback_cb'     => '',
+					'fallback_cb'     => 'manor_menu_fallback',
 				)
 			);
 			?>
 		</div>
 	</nav>
 	<!-- /#site-nav.site-nav -->
-	<?php endif; ?>
 
 	<div id="site-content" class="site-content">

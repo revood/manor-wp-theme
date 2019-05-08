@@ -36,11 +36,9 @@ h6 { font-size: font-size(h6); }
 
 blockquote {
 	color: theme-color(primary);
-	font-weight: bold;
-	font-style: italic;
 
-	cite {
-		color: theme-color(default);
+	a {
+		text-decoration: underline;
 	}
 
 	p:last-child {
@@ -63,6 +61,10 @@ a {
 dl, dd,
 ul, ol {
 	padding: 0;
+}
+
+dt {
+	font-weight: bold;
 }
 
 ul, ol {

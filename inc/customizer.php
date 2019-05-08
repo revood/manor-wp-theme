@@ -14,23 +14,6 @@ function manor_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
-	$wp_customize->add_setting(
-		'twitter_handle',
-		array(
-			'sanitize_callback' => 'esc_attr',
-			'transport'         => 'postMessage',
-		)
-	);
-	$wp_customize->add_control(
-		'twitter_handle',
-		array(
-			'type'        => 'text',
-			'section'     => 'title_tagline',
-			'label'       => __( 'Twitter Handle', 'manor' ),
-			'description' => __( 'This handle will be tagged when users share your article.', 'manor' ),
-		)
-	);
-
 	$wp_customize->selective_refresh->add_partial(
 		'blogname',
 		array(

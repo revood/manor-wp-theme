@@ -43,17 +43,19 @@ h4 {
 }
 
 h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
   font-size: 1.125rem;
 }
 
 blockquote {
   color: #DF6296;
-  font-weight: bold;
-  font-style: italic;
 }
 
-blockquote cite {
-  color: #363636;
+blockquote a {
+  text-decoration: underline;
 }
 
 blockquote p:last-child {
@@ -75,6 +77,10 @@ a:hover {
 dl, dd,
 ul, ol {
   padding: 0;
+}
+
+dt {
+  font-weight: bold;
 }
 
 ul, ol {

@@ -155,7 +155,7 @@ function manor_widgets_init() {
 	register_sidebar(
 		array(
 			'id'            => 'sidebar-1',
-			'name'          => __( 'Sidebar', 'manor' ),
+			'name'          => __( 'Footer Widget Area', 'manor' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'before_title'  => '<h4 class="widget-title">',
 			'after_title'   => '</h4>',
@@ -268,6 +268,21 @@ function manor_footer_share_link_scripts() {
 	<?php
 }
 add_action( 'wp_footer', 'manor_footer_share_link_scripts' );
+
+/**
+ * Fallback menu for `primary` menu location
+ */
+function manor_menu_fallback() {
+	wp_page_menu(
+		array(
+			'menu_id' => 'site-nav-menu',
+			'menu_class' => 'site-nav-menu-container',
+			'show_home' => true,
+			'number' => 3,
+			'before' => '<ul class="menu">',
+		)
+	);
+}
 
 // Custom template tags.
 require get_parent_theme_file_path( 'inc/template-tags.php' );
