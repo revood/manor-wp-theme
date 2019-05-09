@@ -252,24 +252,6 @@ function manor_excerpt_more( $more_text ) {
 add_action( 'excerpt_more', 'manor_excerpt_more' );
 
 /**
- * Share links scripts.
- */
-function manor_footer_share_link_scripts() {
-	?>
-	<script>( function() {
-		var shareLinks = Array.prototype.slice.call( document.querySelectorAll( '.entry-share-links .share' ) );
-		shareLinks.forEach( function( link ) {
-			link.addEventListener( 'click', function( event ) {
-				event.preventDefault();
-				window.open( link.href, 'sharer', 'width=640,height=480' );
-			});
-		});
-	})();</script>
-	<?php
-}
-add_action( 'wp_footer', 'manor_footer_share_link_scripts' );
-
-/**
  * Fallback menu for `primary` menu location
  */
 function manor_menu_fallback() {
