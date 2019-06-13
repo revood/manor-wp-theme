@@ -3,7 +3,7 @@ Contributors: greuben
 Tags: blog, custom-logo, one-column, footer-widgets, featured-images, editor-style, custom-colors, custom-menu
 Requires at least: 5.0
 Tested up to: 5.2.0
-Stable tag: 0.6.0
+Stable tag: 0.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.3.0
@@ -33,6 +33,6 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
 
-Screenshot includes images from Twenty Seventeen WordPress Theme
-License: GPLv2
-Source: https://wordpress.org/themes/twentyseventeen/
+Image used in screenshot, Copyright Bonnie Moreland
+License: CC0
+Source: https://stocksnap.io/photo/ZG0Z82WYGE
