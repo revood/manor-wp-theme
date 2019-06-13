@@ -57,7 +57,7 @@ if ( 'post' === get_post_type() ) {
 
 	<?php if ( has_post_thumbnail() && ! $manor_media ) : ?>
 	<div class="entry-thumbnail">
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-thumb' ); ?></a>
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'manor-blog-thumb' ); ?></a>
 	</div>
 	<!-- /.entry-thumbnail -->
 	<?php endif; ?>
@@ -90,7 +90,7 @@ if ( 'post' === get_post_type() ) {
 
 	<?php if ( has_post_thumbnail() && ! $manor_media ) : ?>
 	<div class="entry-thumbnail">
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'blog-thumb' ); ?></a>
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'manor-blog-thumb' ); ?></a>
 	</div>
 	<div class="entry-wrap">
 	<?php endif; ?>

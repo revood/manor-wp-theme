@@ -21,7 +21,7 @@ if ( ! function_exists( 'manor_setup' ) ) :
 
 		// Enable support for post thumbnails.
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'blog-thumb', 720, 720, true );
+		add_image_size( 'manor-blog-thumb', 720, 720, true );
 
 		// Switch core default markup to ouput valid HTML5.
 		add_theme_support(

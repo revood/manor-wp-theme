@@ -13,6 +13,9 @@
  * @return string
  */
 function manor_get_color_scheme_css( $primary_color, $primary_color_dark ) {
+	$primary_color = esc_attr( $primary_color );
+	$primary_color_dark = esc_attr( $primary_color_dark );
+
 	return <<<CSS
 blockquote,
 a,
@@ -79,6 +82,9 @@ CSS;
  * @return string
  */
 function manor_get_editor_color_scheme_css( $primary_color, $primary_color_dark ) {
+	$primary_color = esc_attr( $primary_color );
+	$primary_color_dark = esc_attr( $primary_color_dark );
+
 	return <<<CSS
 a,
 blockquote,
